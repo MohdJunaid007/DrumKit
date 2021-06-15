@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Drum Kit</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<!-- <body>
+  <div class="animate">
+    
+  </div> -->
+
+  <h1 id="title">Drum 🥁 Kit</h1>
+  
+  <div class="ball"><br><br> BRAVO!!</div>
+  <div class="set">
+    <button class="w drum" onmouseover="handleClick1()"  id="w">w</button>
+    <button class="a drum" onmouseover="handleClick2()" id="a">a</button>
+    <button class="s drum" onmouseover="handleClick3()" id="s">s</button>
+    <button class="d drum" onmouseover="handleClick4()" id="d">d</button>
+    <button class="j drum" onmouseover="handleClick5()" id="j">j</button>
+    <button class="k drum" onmouseover="handleClick6()" id="k">k</button>
+    <button class="l drum" onmouseover="handleClick7()" id="l">l</button>
+  </div>
+
+
+  <footer>
+    Made with ❤️ in India.
+  </footer>
+<script src="index.js"></script>
+<script>
+s1=new Audio('sounds/crash.mp3');
+s2=new Audio('sounds/kick-bass.mp3');
+s3=new Audio('sounds/snare.mp3');
+s4=new Audio('sounds/tom-1.mp3');
+s5=new Audio('sounds/tom-2.mp3');
+s6=new Audio('sounds/tom-3.mp3');
+s7=new Audio('sounds/tom-4.mp3');
+
+  function handleClick1()
+{
+    setTimeout(() => {
+      s1.play();
+    }, 0);
+}
+
+function handleClick2()
+{
+    setTimeout(() => {
+      s2.play();
+    }, 0);
+}
+function handleClick3()
+{
+    setTimeout(() => {
+      s3.play();
+    }, 0);
+}
+function handleClick4()
+{
+    setTimeout(() => {
+      s4.play();
+    }, 0);
+}
+function handleClick5()
+{
+    setTimeout(() => {
+      s5.play();
+    }, 0);
+}
+function handleClick6()
+{
+    setTimeout(() => {
+      s6.play();
+    }, 0);
+}
+function handleClick7()
+{
+    setTimeout(() => {
+      s7.play();
+    }, 0);
+}
+
+document.onkeydown=function(e){
+  console.log("The key code is "+e.keyCode);
+  if(e.keyCode==87)
+  {
+    handleClick1();
+    document.getElementById("w").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("w").style.opacity=1;
+    }, 500);
+     
+   
+  }
+  if(e.keyCode==83)
+  {
+    handleClick3();
+    document.getElementById("s").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("s").style.opacity=1;
+    }, 500);
+  }
+  if(e.keyCode==65)
+  {
+    handleClick2();
+    document.getElementById("a").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("a").style.opacity=1;
+    }, 500);
+  }
+  if(e.keyCode==68)
+  {
+    handleClick4();
+    document.getElementById("d").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("d").style.opacity=1;
+    }, 500);
+  }
+  if(e.keyCode==74)
+  {
+    handleClick5();
+    document.getElementById("j").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("j").style.opacity=1;
+    }, 500);
+  }
+  if(e.keyCode==75)
+  {
+    handleClick6();
+    document.getElementById("k").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("k").style.opacity=1;
+    }, 500);
+  }
+  if(e.keyCode==76)
+  {
+    handleClick7();
+    document.getElementById("l").style.opacity=0.5;
+    setTimeout(() => {
+      document.getElementById("l").style.opacity=1;
+    }, 500);
+  }
+
+
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>
